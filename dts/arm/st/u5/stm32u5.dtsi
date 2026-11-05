@@ -1090,6 +1090,26 @@
 			dma-requests = <16>;
 			status = "disabled";
 		};
+
+		opamp1: opamp@46005000 {
+			compatible = "st,stm32u5-opamp", "st,stm32-opamp";
+			reg = <0x46005000 0x10>;
+			clocks = <&rcc STM32_CLOCK(APB3, 14)>;
+			clock-names = "opampx";
+			programmable-gain = "OPAMP_GAIN_2", "OPAMP_GAIN_4",
+					    "OPAMP_GAIN_8", "OPAMP_GAIN_16";
+			status = "disabled";
+		};
+
+		opamp2: opamp@46005010 {
+			compatible = "st,stm32u5-opamp", "st,stm32-opamp";
+			reg = <0x46005010 0x10>;
+			clocks = <&rcc STM32_CLOCK(APB3, 14)>;
+			clock-names = "opampx";
+			programmable-gain = "OPAMP_GAIN_2", "OPAMP_GAIN_4",
+					    "OPAMP_GAIN_8", "OPAMP_GAIN_16";
+			status = "disabled";
+		};
 	};
 
 	swj_port: swj_port {
