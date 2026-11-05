@@ -10,4 +10,5 @@ zephyr_library_sources_ifdef(CONFIG_OPAMP_MCUX_OPAMP opamp_mcux_opamp.c)
 zephyr_library_sources_ifdef(CONFIG_OPAMP_MCUX_OPAMP_FAST opamp_mcux_opamp_fast.c)
 zephyr_library_sources_ifdef(CONFIG_OPAMP_MSPM0_OPA opamp_mspm0_opa.c)
 zephyr_library_sources_ifdef(CONFIG_OPAMP_STM32 opamp_stm32_opamp.c)
+zephyr_library_sources_ifdef(CONFIG_OPAMP_STM32_U5 opamp_stm32u5_opamp.c)
 # zephyr-keep-sorted-stop

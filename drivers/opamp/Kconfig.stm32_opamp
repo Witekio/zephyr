@@ -1,8 +1,15 @@
 # Copyright (c) 2025 Alexander Kozhinov <ak.alexander.kozhinov@gmail.com>
+# Copyright (c) 2026 Witekio
 # SPDX-License-Identifier: Apache-2.0
 
 config OPAMP_STM32
 	bool "STM32 OPAMP driver"
 	default y
 	select PINCTRL
-	depends on DT_HAS_ST_STM32_OPAMP_ENABLED
+	depends on DT_HAS_ST_STM32_OPAMP_ENABLED && !DT_HAS_ST_STM32U5_OPAMP_ENABLED
+
+config OPAMP_STM32_U5
+	bool "STM32U5 OPAMP driver"
+	default y
+	select PINCTRL
+	depends on DT_HAS_ST_STM32U5_OPAMP_ENABLED
